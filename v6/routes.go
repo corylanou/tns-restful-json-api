@@ -1,4 +1,3 @@
-//START ONE OMIT
 package main
 
 import (
@@ -16,9 +15,6 @@ type Route struct {
 
 type Routes []Route
 
-//END ONE OMIT
-
-//START THREE OMIT
 func NewRouter() *mux.Router {
 
 	router := mux.NewRouter().StrictSlash(true)
@@ -33,8 +29,6 @@ func NewRouter() *mux.Router {
 	return router
 }
 
-//END THREE OMIT
-//START TWO OMIT
 var routes = Routes{
 	Route{
 		"Index",
@@ -55,5 +49,3 @@ var routes = Routes{
 		TodoShow,
 	},
 }
-
-//END TWO OMIT

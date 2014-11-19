@@ -15,7 +15,6 @@ func Index(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "Welcome!\n")
 }
 
-//START INDEX OMIT
 func TodoIndex(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 	w.WriteHeader(http.StatusOK)
@@ -23,8 +22,6 @@ func TodoIndex(w http.ResponseWriter, r *http.Request) {
 		panic(err)
 	}
 }
-
-//END INDEX OMIT
 
 func TodoShow(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
@@ -58,7 +55,6 @@ Test with this curl command:
 curl -H "Content-Type: application/json" -d '{"name":"New Todo"}' http://localhost:8080/todos
 
 */
-//START CREATE OMIT
 func TodoCreate(w http.ResponseWriter, r *http.Request) {
 	var todo Todo
 	body, err := ioutil.ReadAll(io.LimitReader(r.Body, 1048576))
@@ -83,5 +79,3 @@ func TodoCreate(w http.ResponseWriter, r *http.Request) {
 		panic(err)
 	}
 }
-
-//END CREATE OMIT
