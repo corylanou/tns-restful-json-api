@@ -5,7 +5,7 @@ This code repository hosts the examples used in the following [The New Stack](ht
 
 ## Running Examples
 
-To run exmaples, from the root of this project (change the version as needed):
+To run examples, from the root of this project (change the version as needed):
 
 ```sh
 # Run example 1
