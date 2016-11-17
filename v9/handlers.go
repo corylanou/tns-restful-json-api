@@ -49,12 +49,6 @@ func TodoShow(w http.ResponseWriter, r *http.Request) {
 
 }
 
-/*
-Test with this curl command:
-
-curl -H "Content-Type: application/json" -d '{"name":"New Todo"}' http://localhost:8080/todos
-
-*/
 func TodoCreate(w http.ResponseWriter, r *http.Request) {
 	var todo Todo
 	body, err := ioutil.ReadAll(io.LimitReader(r.Body, 1048576))
