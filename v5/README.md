@@ -1,8 +1,8 @@
 # Example 5
 
-## Running the exmaple
+## Running the example
 
-To run this exmaple, from the root of this project:
+To run this example, from the root of this project:
 
 ```sh
 go run ./v5/*.go
